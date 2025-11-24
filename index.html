@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Q3 Earnings Report – Interactive Deck</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+  <!-- Reveal.js core CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+  <!-- Theme (pick any you like: black, white, league, night, etc.) -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/plugin/highlight/monokai.css">
+
+  <style>
+    .email-tag {
+      font-size: 0.6em;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+<div class="reveal">
+  <div class="slides">
+
+    <!-- Title slide -->
+    <section>
+      <h2>Q3 Earnings Report</h2>
+      <h4>Interactive Stakeholder Presentation</h4>
+      <p class="email-tag">
+        Technical Consultant: 23f3001275@ds.study.iitm.ac.in
+      </p>
+      <aside class="notes">
+        Welcome everyone. I’ll walk you through Q3 performance, key drivers, and
+        forward-looking indicators. This deck demonstrates our modern presentation stack
+        using RevealJS.
+      </aside>
+    </section>
+
+    <!-- Markdown slide (REQUIRED) -->
+    <section data-markdown>
+      <textarea data-template>
+## Q3 Snapshot – At a Glance
+
+- **Revenue growth:** 12.4% YoY  
+- **Net income margin:** 18.2%  
+- **Cost-to-income ratio:** 42.7%  
+- **Return on Equity (ROE):** 15.6%  
+
+Contact for details: `23f3001275@ds.study.iitm.ac.in`
+
+Note: All figures are illustrative and for demo purposes.
+      </textarea>
+      <aside class="notes">
+        Use this slide as a high-level overview before diving into the details.
+        Point out each metric briefly and set expectations for the deeper analysis.
+      </aside>
+    </section>
+
+    <!-- Slide with animated fragments -->
+    <section>
+      <h2>Key Earnings Drivers</h2>
+      <ul>
+        <li class="fragment">Growth in **retail banking** fee income</li>
+        <li class="fragment">Higher **digital transaction** volumes</li>
+        <li class="fragment">Tight **cost management** and process automation</li>
+        <li class="fragment">Improved **asset quality** and lower credit costs</li>
+      </ul>
+      <aside class="notes">
+        Reveal each point as you speak.  
+        1) Retail fees: talk about cross-sell and upsell.  
+        2) Digital: highlight mobile app adoption.  
+        3) Costs: mention automation and cloud migration.  
+        4) Asset quality: reference NPA trends.
+      </aside>
+    </section>
+
+    <!-- Code sample with syntax highlighting -->
+    <section>
+      <h2>Analytics: Earnings Growth Function (Python)</h2>
+      <pre><code class="language-python">
+def earnings_growth(current_earnings, previous_earnings):
+    """
+    Compute period-over-period earnings growth.
+    """
+    if previous_earnings == 0:
+        raise ValueError("Previous earnings cannot be zero.")
+    return (current_earnings - previous_earnings) / previous_earnings
+
+# Example: Q3 vs Q2
+q3 = 12.4  # in ₹ billion
+q2 = 11.0  # in ₹ billion
+growth = earnings_growth(q3, q2)
+print(f"Q3 earnings growth: {growth:.2%}")
+      </code></pre>
+      <aside class="notes">
+        Explain that this is a simplified analytical helper used in internal
+        dashboards. Emphasize how automation and scripts reduce manual effort and
+        improve consistency in reporting.
+      </aside>
+    </section>
+
+    <!-- Math slide with financial formulas -->
+    <section>
+      <h2>Financial Metrics – ROE & NIM</h2>
+
+      <p>Return on Equity (ROE):</p>
+      <p>
+        \[
+        \text{ROE} = \frac{\text{Net Income}}{\text{Average Shareholders' Equity}}
+        \]
+      </p>
+
+      <p class="fragment">Net Interest Margin (NIM):</p>
+      <p class="fragment">
+        \[
+        \text{NIM} =
+        \frac{\text{Interest Income} - \text{Interest Expense}}
+             {\text{Average Earning Assets}}
+        \]
+      </p>
+
+      <p class="fragment">
+        For this quarter, we target:
+        \[
+        \text{ROE} \approx 15\% \quad \text{and} \quad \text{NIM} \approx 3.8\%
+        \]
+      </p>
+
+      <aside class="notes">
+        Walk through each formula slowly.  
+        - Emphasize that ROE measures profitability relative to equity.  
+        - NIM shows how efficiently we generate interest income.  
+        Connect these to the strategic goals outlined earlier.
+      </aside>
+    </section>
+
+    <!-- Closing slide -->
+    <section>
+      <h2>Thank You</h2>
+      <p class="fragment">Questions, feedback, or follow-ups are welcome.</p>
+      <p class="fragment email-tag">
+        Reach me at: 23f3001275@ds.study.iitm.ac.in
+      </p>
+      <aside class="notes">
+        Open the floor for questions and ask stakeholders if they’d like deeper
+        dives on specific segments or products.
+      </aside>
+    </section>
+
+  </div>
+</div>
+
+<!-- Reveal.js core JS -->
+<script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+
+<!-- Plugins -->
+<script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    plugins: [
+      RevealMarkdown,
+      RevealHighlight,
+      RevealMath.KaTeX,
+      RevealNotes
+    ],
+    // Optional: math configuration (KaTeX via CDN)
+    math: {
+      // These are default KaTeX CDN URLs used by the plugin
+      // You can leave this block out for standard defaults
+    }
+  });
+</script>
+
+</body>
+</html>
